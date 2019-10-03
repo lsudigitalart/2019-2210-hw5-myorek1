@@ -6,6 +6,7 @@ function setup() {
     a = 800;
     w = -150; 
     s = 0; // ysed to scale circle
+    t = -700;
 
   }
   
@@ -104,7 +105,7 @@ function setup() {
         // rectangles 
         stroke(234,140,99)
         
-        fill(192,53,92)
+        fill(207,40,50)
 
         strokeWeight(2);
 
@@ -166,7 +167,18 @@ function setup() {
    for (var t = 0; t < 800; t += 10) {
      rotate(Pi + t) 
      print (8); 
-   line(t, 0, t, 800);
+   line(t, 0, t, 800); 
    }  */ 
  
+   //moving orange line   
+   for(var c = 1; c <120; c+= 1){
+   rotate(PI/c) 
+        stroke(4,28,300)
+        line(t ,-900,t,900)
+        t = t +.004;
+        if (t > 800){
+            t = -700
+        }
+      }
+
     }
